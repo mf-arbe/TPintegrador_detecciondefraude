@@ -46,7 +46,7 @@ El flujo de trabajo desarrollado en el notebook incluye:
   - variables numéricas con la mediana
 - Codificación de variables categóricas mediante **one-hot encoding**.
 - Construcción de variables derivadas de comportamiento por usuario para la segunda estrategia.
-- Separación de los datos en entrenamiento y test, evitando en algunos experimentos la superposición de usuarios entre ambos subconjuntos.
+- Separación de los datos en entrenamiento y test, evitando la superposición de usuarios entre ambos subconjuntos.
 - Escalado de variables cuando corresponde.
 - Balanceo del conjunto de entrenamiento mediante **SMOTE**.
 - Entrenamiento y comparación de múltiples modelos.
