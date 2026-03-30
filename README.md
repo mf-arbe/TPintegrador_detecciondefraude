@@ -5,8 +5,8 @@ Este repositorio contiene el código y los recursos para el Trabajo Práctico In
 ## Contenido
 
 - `TPintegrador_Grupo_4.ipynb`: notebook Jupyter con todo el análisis del proyecto, incluyendo análisis exploratorio de datos (EDA), tratamiento de valores faltantes, feature engineering, modelado, evaluación y comparación de estrategias.
+- `data/Fraud Detection Dataset.csv`: dataset utilizado por el notebook.
 - `README.md`: este archivo, con la descripción general del trabajo, requisitos y forma de ejecución.
-- `data/`: carpeta que contiene el dataset descargado desde Kaggle.
 
 ## Objetivo del trabajo
 
@@ -19,8 +19,9 @@ A lo largo del trabajo se evalúan dos estrategias principales:
 
 ## Variables del dataset
 
-El conjunto de datos incluye, las siguientes variables:
+El conjunto de datos incluye, entre otras, las siguientes variables:
 
+- `Transaction_ID`
 - `User_ID`
 - `Transaction_Amount`
 - `Transaction_Type`
@@ -83,6 +84,7 @@ En el contexto del problema, las métricas más relevantes son **PR-AUC** y **Re
 ## Requisitos
 
 - Python 3.10 o superior.
+- Jupyter Notebook o JupyterLab para ejecutar el archivo `.ipynb`.
 - Librerías de Python:
   - `pandas`
   - `numpy`
@@ -108,21 +110,36 @@ En el contexto del problema, las métricas más relevantes son **PR-AUC** y **Re
 3. Instala las dependencias necesarias:
 
    ```bash
-   pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn xgboost lightgbm catboost tensorflow
+   pip install pandas numpy matplotlib seaborn scikit-learn imbalanced-learn xgboost lightgbm catboost tensorflow jupyterlab notebook
    ```
-
 
 ## Ejecución del notebook
 
-1. Abre el notebook con Jupyter Notebook, JupyterLab o Visual Studio Code:
+1. Verifica que el dataset exista en la ruta:
+
+   ```bash
+   data/Fraud\ Detection\ Dataset.csv
+   ```
+
+2. Desde la raíz del proyecto, abre el notebook con Jupyter Notebook, JupyterLab o Visual Studio Code:
+
+   ```bash
+   jupyter lab TPintegrador_Grupo_4.ipynb
+   ```
+
+   También puedes usar:
 
    ```bash
    jupyter notebook TPintegrador_Grupo_4.ipynb
    ```
 
-2. Ejecuta las celdas en orden. 
+3. Ejecuta las celdas en orden.
 
-3. Al finalizar, podrás comparar el desempeño de los distintos modelos y discutir los resultados en función de las características del dataset.
+4. El notebook carga el dataset desde `data/Fraud Detection Dataset.csv` y compara dos estrategias:
+   - Estrategia 1: partición train/test estratificada a nivel transacción.
+   - Estrategia 2: partición por usuario para evitar que un mismo usuario aparezca en train y test.
+
+5. Al finalizar, podrás comparar el desempeño de los distintos modelos y discutir los resultados en función de las características del dataset.
 
 ## Principales hallazgos del trabajo
 
