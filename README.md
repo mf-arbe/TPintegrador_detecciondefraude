@@ -145,21 +145,19 @@ En el contexto del problema, las métricas más relevantes son **PR-AUC** y **Re
 
 Entre los hallazgos más relevantes se destacan:
 
-- fuerte desbalance entre clases
-- distribuciones muy similares entre fraude y no fraude para la mayoría de las variables
-- baja correlación entre las variables y la variable objetivo
-- desempeño general de los modelos cercano al azar, sugiriendo baja señal predictiva en el dataset
-- la estrategia basada en comportamiento de usuario no mostró mejoras sustanciales respecto del enfoque transaccional
+- Existe un fuerte desbalance de clases (~5% fraude) que condiciona el problema.
+- Las variables muestran distribuciones muy similares entre fraude y no fraude, sin capacidad clara de separación.
+- Se observa baja correlación con la variable objetivo, indicando limitada capacidad explicativa.
+- Todos los modelos presentan un desempeño cercano al azar, lo que sugiere baja señal predictiva en el dataset.
+- La estrategia basada en comportamiento de usuario no mejora significativamente los resultados.
+- El ajuste del threshold no permitió reducir los falsos positivos sin afectar otras métricas, reforzando la limitación del dataset.
 
-Estos resultados permiten concluir que la principal limitación del problema parece estar en la calidad y capacidad explicativa de las variables disponibles, más que en la complejidad de los modelos empleados.
+En conjunto, la principal limitación está en los datos, no en los modelos.
 
 ## Posibles líneas futuras de mejora
 
-- optimización del umbral de decisión en función del costo de falsos negativos y falsos positivos
-- segmentación del problema por rangos de monto de transacción
-- construcción de variables temporales más robustas
-- incorporación de features de comportamiento más ricos por usuario
-- evaluación de técnicas avanzadas de explicabilidad
+- Integración de datos externos o contextuales (por ejemplo, geolocalización más precisa, características del dispositivo o redes de conexión entre usuarios).
+- Evaluación de técnicas avanzadas de explicabilidad, que permitan comprender mejor las decisiones del modelo y detectar posibles fuentes de ruido o sesgo en los datos.
 
 ## Referencias
 
