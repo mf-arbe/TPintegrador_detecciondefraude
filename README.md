@@ -15,7 +15,7 @@ El objetivo del presente trabajo es generar un modelo que permita detectar posib
 A lo largo del trabajo se evalúan dos estrategias principales:
 
 1. **Estrategia 1 – Modelado a nivel transacción**: se utilizan directamente las variables disponibles en el dataset luego del preprocesamiento.
-2. **Estrategia 2 – Modelado con feature engineering por usuario**: se construyen variables adicionales a partir del comportamiento histórico de cada usuario, con el objetivo de capturar cambios en el patrón de uso entre transacciones sucesivas.
+2. **Estrategia 2 – Modelado con feature engineering por usuario**: se construyen variables adicionales a partir del comportamiento histórico de cada usuario, con el objetivo de capturar cambios en el patrón de uso.
 
 ## Variables del dataset
 
@@ -51,6 +51,8 @@ El flujo de trabajo desarrollado en el notebook incluye:
 - Balanceo del conjunto de entrenamiento mediante **SMOTE**.
 - Entrenamiento y comparación de múltiples modelos.
 - Evaluación mediante métricas apropiadas para clases desbalanceadas.
+- Feature importance 
+- KPI relevantes para el negocio
 
 ## Modelos evaluados
 
